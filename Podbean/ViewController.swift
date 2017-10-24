@@ -9,17 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let urlString = "https://api.podbean.com/v1/dialog/oauth?redirect_uri=Podbean://asdasdasd&scope=podcast_read+podcast_update+episode_publish+episode_read&response_type=code&client_id=cdad3f68e05db5632da36"
+        UIApplication.shared.open(URL(string:urlString)!, options: [:]) { (finished) in
+            print(finished)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
